@@ -1,0 +1,20 @@
+Javascript variables
+
+Javascript is case sensitive
+
+// for JS commments
+
+variables
+    strings
+    numbers
+    booleans (true, false)
+
+confirms- yes or no answer
+prompts- asks a question
+
+document.write - writes to the HTMl page
+
+arrays - ["item", "item", "item"]
+
+if and else statements
+

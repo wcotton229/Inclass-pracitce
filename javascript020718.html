@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Open the console!</title>
+</head>
+<body>
+    <h1>Open the console!</h1>
+
+    <script>
+    var age = 29;
+    var meaningOfLife = 42;
+    var drinkingAge = 21;
+
+    var addition = age + drinkingAge; //50
+    var difference =  age - drinkingAge; //8
+    console.log(difference);
+
+    var ageMeaning = age + meaningOfLife; //2942
+    console.log(ageMeaning);
+
+    var ageMeaningDiff = age - meaningOfLife;
+    console.log(ageMeaningDiff);
+
+    var division = age / drinkingAge; //Division
+    console.log(division);
+
+    var multiplication = age * drinkingAge; //Multilication
+    console.log(multiplication)
+
+    var modulus = age % drinkingAge;
+    console.log(modulus)
+
+
+//strict elements
+    if(meaningOfLife === 42){
+        console.log("You found the meaning")
+    }else{
+        console.log("Keep searching")
+    }
+
+//Loose equals
+    if(meaningOfLife == 42){
+        console.log("Meaning established")
+    }
+    
+    if(meaningOfLife !== "21" || drinkingAge < 21){
+        console.log("Meaning is not 21")
+    }
+    </script>
+
+</body>
+</html>
