@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hiking Trails Test</title>
+</head>
+
+<body>
+  <!-- Retrieved data will be dumped here -->
+  <div class="city"></div>
+  <div class="wind"></div>
+  <div class="humidity"></div>
+  <div class="temp"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // This is our API key
+    var APIKey = "200232469-8c224addc6df491926b59fdf73c26e1a";
+
+    // Here we are building the URL we need to query the database
+    var queryURL = "https://www.hikingproject.com/data/get-trails?lat=39.9997&lon=-105.283&maxDistance=10&key=" + APIKey;
+
+    // Here we run our AJAX call to the OpenWeatherMap API
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+      // We store all of the retrieved data inside of an object called "response"
+      .then(function(response) {
+
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
+        console.log(response);
+
+        // Transfer content to HTML
+        $(".city").html("<h1>" + response.name + "</h1>");
+        $(".wind").text("Type: " + response.type);
+        $(".humidity").text("Trail Length: " + response.length);
+        $(".temp").text("Altitude:" + response.ascent);
+
+        // Log the data in the console as well
+        console.log(response.trails[0].location);
+        console.log(response.trails[0].type);
+        console.log(response.trails[0].length);
+        console.log(response.trails[0].ascent);
+      });
+  </script>
+</body>
+
+</html>
