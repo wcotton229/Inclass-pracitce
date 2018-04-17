@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS animals_db;
 
 USE animals_db;
 
-CREATE table people (
+CREATE TABLE people (
 name VARCHAR(30) NOT NULL,
 has_pet BOOLEAN NOT NULL,
 pet_name VARCHAR(30),
